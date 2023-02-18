@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app=express()
-mongoose.connect("mongodb://127.0.0.1:27017/newdb",{
+mongoose.connect("mongodb+srv://lanta:lantaspera@cluster0.vythqyv.mongodb.net/ecom?retryWrites=true&w=majority",{
     useNewUrlParser:true, useUnifiedTopology:true
 },(err)=>{
     if(err)
