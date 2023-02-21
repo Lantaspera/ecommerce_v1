@@ -9,6 +9,7 @@ const Signup = () => {
         event.preventDefault();
         // Add code to submit the form data to your backend
     };
+   
 
     return (
         <form className="signup-form" onSubmit={handleSubmit}>

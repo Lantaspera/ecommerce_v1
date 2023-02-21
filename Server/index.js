@@ -1,7 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app=express()
-mongoose.connect("mongodb+srv://lanta:lantaspera@cluster0.vythqyv.mongodb.net/ecom?retryWrites=true&w=majority",{
+
+
+const User= require('./model/User');
+
+mongoose.connect("mongodb://127.0.0.1:27017/newdb",{
     useNewUrlParser:true, useUnifiedTopology:true
 },(err)=>{
     if(err)
@@ -12,6 +16,7 @@ mongoose.connect("mongodb+srv://lanta:lantaspera@cluster0.vythqyv.mongodb.net/ec
         console.log("successfully connected")   
     }
 })
+
 
 app.listen(3006,()=>{
     console.log("on port 3006 !!!")
