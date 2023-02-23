@@ -4,6 +4,7 @@ const app=express()
 
 
 const User= require('./model/User');
+const product= require('./model/Product');
 
 mongoose.connect("mongodb://127.0.0.1:27017/newdb",{
     useNewUrlParser:true, useUnifiedTopology:true
