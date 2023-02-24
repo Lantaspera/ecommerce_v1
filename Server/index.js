@@ -4,6 +4,7 @@ const app=express()
 
 
 const User= require('./model/User');
+const product= require('./model/Product');
 
 mongoose.connect("mongodb+srv://lanta:lantaspera@cluster0.vythqyv.mongodb.net/ecom?retryWrites=true&w=majority",{
     useNewUrlParser:true, useUnifiedTopology:true
