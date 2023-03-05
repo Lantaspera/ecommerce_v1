@@ -1,15 +1,23 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Register from "./pages/register/Register"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/header/Topnavbar';
+import HomeScreen from './pages/HomeScreen';
+import Mensproduct from './pages/Mensproduct';
+import Card from './components/mensproduct/Card';
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Register/>
-      </div>
-    </Router>
-    
+    <BrowserRouter>
+    <div className="App">
+        <NavBar/>
+      <main>
+        <Routes>
+          <Route path='/' element={<HomeScreen/>}/>
+          <Route path='/products' element={<Card/>}/>
+        </Routes>
+      </main>  
+     </div> 
+     </BrowserRouter>   
   );
 }
 
