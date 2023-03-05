@@ -1,24 +1,27 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './components/header/Topnavbar';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import HomeScreen from './pages/HomeScreen';
-import Mensproduct from './pages/Mensproduct';
-import Card from './components/mensproduct/Card';
+import ProductScreen from './pages/ProductScreen';
+
+
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-        <NavBar/>
-      <main>
-        <Routes>
-        {/* <Route path='/' element={<HomeScreen/>}/> */}
-          <Route path='/' element={<Card/>}/>
-        </Routes>
-      </main>  
-     </div> 
-     </BrowserRouter>   
+      <div>
+        <header>
+          <Link to="/">sketchgenz</Link>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
+
 
 export default App;
